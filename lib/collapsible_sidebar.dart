@@ -23,11 +23,12 @@ class CollapsibleSidebar extends StatefulWidget {
     this.toggleTitleStyle,
     this.toggleTitle = 'Collapse',
     this.avatarImg,
+    this.avatarSize = 50,
     this.height = double.infinity,
     this.minWidth = 80,
     this.maxWidth = 270,
-    this.borderRadius = 15,
-    this.iconSize = 40,
+    this.borderRadius = 0,
+    this.iconSize = 20,
     this.toggleButtonIcon = Icons.chevron_right,
     this.backgroundColor = const Color(0xff2B3138),
     this.selectedIconBox = const Color(0xff2F4047),
@@ -45,12 +46,14 @@ class CollapsibleSidebar extends StatefulWidget {
     required this.body,
     this.onTitleTap,
     this.isCollapsed = true,
-    this.sidebarBoxShadow = const [BoxShadow(
-      color: Colors.blue,
-      blurRadius: 10,
-      spreadRadius: 0.01,
-      offset: Offset(3, 3),
-    ),],
+    this.sidebarBoxShadow = const [
+      BoxShadow(
+        color: Colors.blue,
+        blurRadius: 10,
+        spreadRadius: 0.01,
+        offset: Offset(3, 3),
+      ),
+    ],
   });
 
   final String title, toggleTitle;
@@ -66,6 +69,7 @@ class CollapsibleSidebar extends StatefulWidget {
       minWidth,
       maxWidth,
       borderRadius,
+      avatarSize,
       iconSize,
       padding = 10,
       itemPadding = 10,
@@ -269,7 +273,7 @@ class _CollapsibleSidebarState extends State<CollapsibleSidebar>
             )
           : CollapsibleAvatar(
               backgroundColor: widget.unselectedIconColor,
-              avatarSize: widget.iconSize,
+              avatarSize: widget.avatarSize,
               name: widget.title,
               avatarImg: widget.avatarImg,
               textStyle: _textStyle(widget.backgroundColor, widget.titleStyle),

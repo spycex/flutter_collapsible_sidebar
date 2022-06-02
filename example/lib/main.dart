@@ -26,8 +26,7 @@ class SidebarPage extends StatefulWidget {
 class _SidebarPageState extends State<SidebarPage> {
   List<CollapsibleItem> _items;
   String _headline;
-  AssetImage _avatarImg =
-      AssetImage('assets/man.png');
+  Widget _avatarImg;
 
   @override
   void initState() {
@@ -39,57 +38,68 @@ class _SidebarPageState extends State<SidebarPage> {
   List<CollapsibleItem> get _generateItems {
     return [
       CollapsibleItem(
+        margin: EdgeInsets.only(top: 1.0),
         text: 'Dashboard',
         icon: Icons.assessment,
         onPressed: () => setState(() => _headline = 'DashBoard'),
         isSelected: true,
       ),
       CollapsibleItem(
+        margin: EdgeInsets.only(top: 1.0),
         text: 'Ice-Cream',
         icon: Icons.icecream,
         onPressed: () => setState(() => _headline = 'Errors'),
       ),
       CollapsibleItem(
+        margin: EdgeInsets.only(top: 1.0),
         text: 'Search',
         icon: Icons.search,
         onPressed: () => setState(() => _headline = 'Search'),
       ),
       CollapsibleItem(
+        margin: EdgeInsets.only(top: 1.0),
         text: 'Notifications',
         icon: Icons.notifications,
         onPressed: () => setState(() => _headline = 'Notifications'),
       ),
       CollapsibleItem(
+        margin: EdgeInsets.only(top: 1.0),
         text: 'Settings',
         icon: Icons.settings,
         onPressed: () => setState(() => _headline = 'Settings'),
       ),
       CollapsibleItem(
+        margin: EdgeInsets.only(top: 1.0),
         text: 'Home',
         icon: Icons.home,
         onPressed: () => setState(() => _headline = 'Home'),
       ),
       CollapsibleItem(
+        margin: EdgeInsets.only(top: 1.0),
         text: 'Alarm',
         icon: Icons.access_alarm,
         onPressed: () => setState(() => _headline = 'Alarm'),
       ),
       CollapsibleItem(
+        margin: EdgeInsets.only(top: 1.0),
         text: 'Eco',
         icon: Icons.eco,
         onPressed: () => setState(() => _headline = 'Eco'),
       ),
       CollapsibleItem(
+        margin: EdgeInsets.only(top: 1.0),
         text: 'Event',
         icon: Icons.event,
         onPressed: () => setState(() => _headline = 'Event'),
       ),
       CollapsibleItem(
+        margin: EdgeInsets.only(top: 1.0),
         text: 'Email',
         icon: Icons.email,
         onPressed: () => setState(() => _headline = 'Email'),
       ),
       CollapsibleItem(
+        margin: EdgeInsets.only(top: 1.0),
         text: 'Face',
         icon: Icons.face,
         onPressed: () => setState(() => _headline = 'Face'),
